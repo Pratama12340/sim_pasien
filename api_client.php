@@ -11,7 +11,10 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 define('API_CONFIG_FILE', __DIR__ . '/api_url.txt');
-define('SERVER_B_JWT_SECRET', 'jhbdcuywgeucyagiusefuhwgeufwudhvfdhvhvgfhghgsdgfyte');
+// Secret dibaca dari config.php (tidak di-commit). Lihat config.example.php & README.md.
+$__cfg = is_file(__DIR__ . '/config.php') ? (array)require __DIR__ . '/config.php' : [];
+define('SERVER_B_JWT_SECRET', (string)($__cfg['JWT_SECRET'] ?? getenv('JWT_SECRET') ?: ''));
+unset($__cfg);
 
 /**
  * Menghasilkan token JWT baca-publik (Service Token) ketika pengunjung membuka Landing Page (index.php)

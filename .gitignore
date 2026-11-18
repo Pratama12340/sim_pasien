@@ -1,0 +1,10 @@
+# Konfigurasi rahasia lokal (berisi JWT_SECRET) - jangan di-push
+config.php
+
+# File sementara / editor
+*.log
+~$*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
