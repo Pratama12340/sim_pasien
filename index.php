@@ -269,7 +269,7 @@ $listAsu = is_array($resAsu['data'] ?? null) ? $resAsu['data'] : [];
     <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-center text-xs">
         <div class="max-w-7xl mx-auto px-4">
             <p class="font-semibold text-white">SIM-RS Medika — Sistem Informasi Manajemen Pasien Berbasis Web Service (SOA)</p>
-            <p class="mt-1">Server Utama (A) Frontend & RBAC $\leftrightarrow$ Server (B) Database <code>dbPasien</code> & REST API</p>
+            <p class="mt-1">Server Utama (A) Frontend & RBAC &harr; Server (B) Database <code>dbPasien</code> & REST API</p>
         </div>
     </footer>
 
